@@ -41,7 +41,8 @@ namespace AD_Coursework_01
                     {
                         // Login successful
                         MessageBox.Show("Login successful!");
-                        // Proceed to the next form or functionality
+                        CustomerMenuBar customerDashboard = new CustomerMenuBar();
+                        customerDashboard.Show();
                     }
                     else
                     {

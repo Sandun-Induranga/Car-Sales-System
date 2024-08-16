@@ -1,5 +1,6 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms.VisualStyles;
 
 namespace AD_Coursework_01
 {
@@ -45,11 +46,12 @@ namespace AD_Coursework_01
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.DataSource = this.abccartradersDataSetBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(65, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 116);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(583, 209);
+            this.dataGridView1.Size = new System.Drawing.Size(575, 209);
             this.dataGridView1.TabIndex = 0;
             // 
             // abccartradersDataSetBindingSource
@@ -71,10 +73,11 @@ namespace AD_Coursework_01
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(715, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "AdminDashboard";
             this.Text = "AdminDashboard";
+            this.Load += new System.EventHandler(this.AdminDashboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abc_car_tradersDataSet)).EndInit();

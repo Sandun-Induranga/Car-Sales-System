@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,6 +64,24 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerDashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerDashboard.Designer.cs">
+      <DependentUpon>CustomerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerMenuBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerMenuBar.Designer.cs">
+      <DependentUpon>CustomerMenuBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseCarsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PurchaseCarsForm.Designer.cs">
+      <DependentUpon>PurchaseCarsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +102,12 @@
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDashboard.resx">
+      <DependentUpon>CustomerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerMenuBar.resx">
+      <DependentUpon>CustomerMenuBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="CustomerLogin.resx">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseCarsForm.resx">
+      <DependentUpon>PurchaseCarsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WelcomeForm.resx">
       <DependentUpon>WelcomeForm.cs</DependentUpon>
