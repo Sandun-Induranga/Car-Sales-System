@@ -43,7 +43,7 @@ namespace AD_Coursework_01
 
         private void btnCarParts_Click(object sender, EventArgs e)
         {
-
+            LoadContentIntoPanel(new CarPartsForm());
         }
 
         private void btnOrders_Click(object sender, EventArgs e)

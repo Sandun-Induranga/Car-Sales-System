@@ -64,6 +64,12 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarPartsForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarPartsForm.Designer.cs">
+      <DependentUpon>CarPartsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerDashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CarPartsForm.resx">
+      <DependentUpon>CarPartsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerDashboard.resx">
       <DependentUpon>CustomerDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +125,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="CustomerLogin.resx">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
@@ -149,6 +159,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\64384.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\643841.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
