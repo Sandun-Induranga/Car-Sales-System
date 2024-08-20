@@ -86,7 +86,7 @@ ProgressBarTimer_Tick
             progressBarTimer.Start();
 
             // Open the CustomerLogin form
-            CustomerLogin customerLogin = new CustomerLogin();
+            LoginForm customerLogin = new LoginForm();
             customerLogin.Location = this.Location;
             customerLogin.StartPosition = FormStartPosition.CenterScreen;
             customerLogin.Show();

@@ -1,6 +1,6 @@
 ﻿namespace AD_Coursework_01
 {
-    partial class CustomerLogin
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -55,17 +56,28 @@
             this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // CustomerLogin
+            // btnSignUp
+            // 
+            this.btnSignUp.Location = new System.Drawing.Point(632, 244);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(220, 23);
+            this.btnSignUp.TabIndex = 1;
+            this.btnSignUp.Text = "Sign Up";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 492);
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
-            this.Name = "CustomerLogin";
+            this.Name = "LoginForm";
             this.Text = "UserLogin";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -77,5 +89,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }

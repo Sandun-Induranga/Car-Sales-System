@@ -49,7 +49,7 @@
             this.tblCarParts.AutoGenerateColumns = false;
             this.tblCarParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblCarParts.DataSource = this.abccartradersDataSetBindingSource;
-            this.tblCarParts.Location = new System.Drawing.Point(50, 268);
+            this.tblCarParts.Location = new System.Drawing.Point(50, 266);
             this.tblCarParts.Name = "tblCarParts";
             this.tblCarParts.Size = new System.Drawing.Size(724, 259);
             this.tblCarParts.TabIndex = 0;
@@ -73,14 +73,14 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(281, 62);
+            this.txtName.Location = new System.Drawing.Point(306, 62);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(199, 20);
             this.txtName.TabIndex = 1;
             // 
             // txtUnitPrice
             // 
-            this.txtUnitPrice.Location = new System.Drawing.Point(513, 62);
+            this.txtUnitPrice.Location = new System.Drawing.Point(571, 62);
             this.txtUnitPrice.Name = "txtUnitPrice";
             this.txtUnitPrice.Size = new System.Drawing.Size(199, 20);
             this.txtUnitPrice.TabIndex = 1;
@@ -94,31 +94,33 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(513, 110);
+            this.btnSave.Location = new System.Drawing.Point(571, 110);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(199, 23);
             this.btnSave.TabIndex = 2;
-            this.btnSave.Text = "button1";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(513, 152);
+            this.btnUpdate.Location = new System.Drawing.Point(571, 152);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(199, 23);
             this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "button2";
+            this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(513, 197);
+            this.btnDelete.Location = new System.Drawing.Point(571, 197);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(199, 23);
             this.btnDelete.TabIndex = 3;
-            this.btnDelete.Text = "button2";
+            this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // CarPartsForm
             // 
