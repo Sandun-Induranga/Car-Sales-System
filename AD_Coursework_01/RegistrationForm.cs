@@ -97,5 +97,13 @@ namespace AD_Coursework_01
                 return builder.ToString();
             }
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            // Transition to the Login form
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Hide();
+        }
     }
 }

@@ -57,8 +57,8 @@ namespace AD_Coursework_01
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             // Transition to the Sign Up form
-           // SignUpForm signUpForm = new SignUpForm();
-            //signUpForm.Show();
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
             this.Hide();
         }
 
