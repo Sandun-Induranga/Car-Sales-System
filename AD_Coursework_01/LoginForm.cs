@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Text;
-
+ 
 namespace AD_Coursework_01
 {
     public partial class LoginForm : Form
@@ -13,13 +13,13 @@ namespace AD_Coursework_01
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             // Connection string to your SQL Server database
             string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
 
-            // SQL query to check if the provided credentials are valid
-            string query = "SELECT COUNT(1) FROM [User] WHERE Username = @Username AND Password = @Password";
+            // SQL query to check the credentials and retrieve the user role
+            string query = "SELECT Role FROM [User] WHERE Username = @Username AND Password = @Password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -30,16 +30,27 @@ namespace AD_Coursework_01
                 try
                 {
                     connection.Open();
-                    int result = (int)command.ExecuteScalar();
+                    string role = (string)command.ExecuteScalar();
 
-                    if (result > 0)
+                    if (role != null)
                     {
-                        // Login successful
-                        MessageBox.Show("Login successful!");
-                        CustomerMenuBar customerDashboard = new CustomerMenuBar();
-                        // Load Dashboard or transition to the next form
-                        customerDashboard.Show();
-                        this.Hide();
+                        // Login successful, check role
+                        if (role == "Admin")
+                        {
+                            // Redirect to Admin form
+                            MessageBox.Show("Login successful! Redirecting to Admin Dashboard.");
+                            //AdminForm adminDashboard = new AdminForm();
+                            //adminDashboard.Show();
+                        }
+                        else if (role == "Customer")
+                        {
+                            // Redirect to Customer form
+                            MessageBox.Show("Login successful! Redirecting to Customer Dashboard.");
+                            CustomerMenuBar customerDashboard = new CustomerMenuBar();
+                            customerDashboard.Show();
+                        }
+
+                        this.Hide(); // Hide the login form
                     }
                     else
                     {
