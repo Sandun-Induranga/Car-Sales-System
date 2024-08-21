@@ -13,7 +13,7 @@ namespace AD_Coursework_01
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             // Connection string to your SQL Server database
             string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
@@ -53,7 +53,7 @@ namespace AD_Coursework_01
                         this.Hide(); // Hide the login form
                     }
                     else
-                    {
+                    {   
                         // Login failed
                         MessageBox.Show("Invalid username or password.");
                     }
@@ -65,7 +65,7 @@ namespace AD_Coursework_01
             }
         }
 
-        private void btnSignUp_Click(object sender, EventArgs e)
+        private void BtnSignUp_Click(object sender, EventArgs e)
         {
             // Transition to the Sign Up form
             RegistrationForm registrationForm = new RegistrationForm();

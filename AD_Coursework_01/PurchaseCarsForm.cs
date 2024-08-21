@@ -72,7 +72,6 @@ namespace AD_Coursework_01
                 txtColor.Text = row.Cells["color"].Value.ToString().Trim();
                 txtPrice.Text = row.Cells["price"].Value.ToString().Trim();
                 txtQtyOnHand.Text = row.Cells["qtyOnHand"].Value.ToString().Trim();
-                txtNumOfSeats.Text = row.Cells["numOfSeats"].Value.ToString().Trim();
             }
         }
 
@@ -84,7 +83,7 @@ namespace AD_Coursework_01
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Car (carId, brand, model, year, color, price, qtyOnHand, numOfSeats) VALUES (@carId, @brand, @model, @year, @color, @price, @qtyOnHand, @numOfSeats)", con))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Car (carId, brand, model, year, color, price, qtyOnHand) VALUES (@carId, @brand, @model, @year, @color, @price, @qtyOnHand)", con))
                     {
                         con.Open();
                         cmd.Parameters.AddWithValue("@carId", txtId.Text);
@@ -94,7 +93,6 @@ namespace AD_Coursework_01
                         cmd.Parameters.AddWithValue("@color", txtColor.Text);
                         cmd.Parameters.AddWithValue("@price", txtPrice.Text);
                         cmd.Parameters.AddWithValue("@qtyOnHand", txtQtyOnHand.Text);
-                        cmd.Parameters.AddWithValue("@numOfSeats", txtNumOfSeats.Text);
 
                         cmd.ExecuteNonQuery();
                     }
@@ -117,7 +115,7 @@ namespace AD_Coursework_01
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE Car SET brand = @brand, model = @model, year = @year, color = @color, price = @price, qtyOnHand = @qtyOnHand, numOfSeats = @numOfSeats WHERE CarId = @CarId", con))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Car SET brand = @brand, model = @model, year = @year, color = @color, price = @price, qtyOnHand = @qtyOnHand WHERE CarId = @CarId", con))
                     {
                         con.Open();
                         cmd.Parameters.AddWithValue("@CarId", txtId.Text); // Assuming CarId is stored in txtCarId
@@ -127,7 +125,6 @@ namespace AD_Coursework_01
                         cmd.Parameters.AddWithValue("@color", txtColor.Text);
                         cmd.Parameters.AddWithValue("@price", txtPrice.Text);
                         cmd.Parameters.AddWithValue("@qtyOnHand", txtQtyOnHand.Text);
-                        cmd.Parameters.AddWithValue("@numOfSeats", txtNumOfSeats.Text);
 
                         cmd.ExecuteNonQuery();
                     }
