@@ -64,6 +64,12 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminMenuBar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMenuBar.Designer.cs">
+      <DependentUpon>AdminMenuBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarPartsForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
