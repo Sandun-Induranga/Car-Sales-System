@@ -39,8 +39,8 @@ namespace AD_Coursework_01
                         {
                             // Redirect to Admin form
                             MessageBox.Show("Login successful! Redirecting to Admin Dashboard.");
-                            //AdminForm adminDashboard = new AdminForm();
-                            //adminDashboard.Show();
+                            AdminMenuBar adminMenuBar = new AdminMenuBar();
+                            adminMenuBar.Show();
                         }
                         else if (role == "Customer")
                         {

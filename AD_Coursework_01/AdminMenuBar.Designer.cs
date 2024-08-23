@@ -63,6 +63,7 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = true;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panel2
             // 
@@ -127,6 +128,7 @@
             this.btnOrders.Text = "Purchase Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnCarParts
             // 
@@ -144,6 +146,7 @@
             this.btnCarParts.Text = "Car Parts";
             this.btnCarParts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCarParts.UseVisualStyleBackColor = true;
+            this.btnCarParts.Click += new System.EventHandler(this.btnCarParts_Click);
             // 
             // btnCars
             // 
@@ -161,8 +164,9 @@
             this.btnCars.Text = "Cars";
             this.btnCars.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCars.UseVisualStyleBackColor = true;
+            this.btnCars.Click += new System.EventHandler(this.btnCars_Click);
             // 
-            // CustomerMenuBar
+            // AdminMenuBar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

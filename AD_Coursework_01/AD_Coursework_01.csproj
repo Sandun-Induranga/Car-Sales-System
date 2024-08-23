@@ -132,6 +132,9 @@
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminMenuBar.resx">
+      <DependentUpon>AdminMenuBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarPartsForm.resx">
       <DependentUpon>CarPartsForm.cs</DependentUpon>
     </EmbeddedResource>
