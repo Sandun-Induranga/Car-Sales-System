@@ -13,14 +13,13 @@ namespace AD_Coursework_01
         public OrderDetailsForm()
         {
             InitializeComponent();
-            LoadOrders(); // Load all orders on form load
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            dgvOrders.SelectionChanged += dgvOrders_SelectionChanged;
-            btnUpdateStatus.Click += btnUpdateStatus_Click;
+            LoadOrders(); // Load all orders on form load
+            dgvOrders.SelectionChanged += dgvOrders_SelectionChanged; // Load order details when an order is selected
         }
 
         private void LoadOrders()
@@ -31,10 +30,19 @@ namespace AD_Coursework_01
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                adapter.Fill(orderTable);
+                try
+                {
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    orderTable.Clear(); // Clear the previous orders
+                    adapter.Fill(orderTable); // Fill the DataTable with data
+                    MessageBox.Show(orderTable.Rows.Count.ToString());
 
-                dgvOrders.DataSource = orderTable; // Bind to a DataGridView
+                    dgvOrders.DataSource = orderTable; // Bind the DataGridView to the DataTable
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data: " + ex.Message);
+                }
             }
         }
 
@@ -46,8 +54,7 @@ namespace AD_Coursework_01
                 var selectedRow = dgvOrders.SelectedRows[0];
                 int orderID = Convert.ToInt32(selectedRow.Cells["OrderID"].Value);
 
-                LoadOrderDetails(orderID);
-                cmbStatus.SelectedItem = selectedRow.Cells["OrderStatus"].Value.ToString();
+                LoadOrderDetails(orderID); // Load order details based on selected OrderID
             }
         }
 
@@ -59,46 +66,20 @@ namespace AD_Coursework_01
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                adapter.SelectCommand.Parameters.AddWithValue("@OrderID", orderID);
-
-                orderDetailsTable.Clear(); // Clear the previous details
-                adapter.Fill(orderDetailsTable);
-
-                dgvOrderDetails.DataSource = orderDetailsTable; // Bind to a DataGridView
-            }
-        }
-
-        private void btnUpdateStatus_Click(object sender, EventArgs e)
-        {
-            // Update the status of the selected order
-            if (dgvOrders.SelectedRows.Count > 0)
-            {
-                var selectedRow = dgvOrders.SelectedRows[0];
-                int orderID = Convert.ToInt32(selectedRow.Cells["OrderID"].Value);
-                string newStatus = cmbStatus.SelectedItem.ToString();
-
-                string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
-                string query = "UPDATE [Order] SET OrderStatus = @OrderStatus WHERE OrderID = @OrderID";
-
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                try
                 {
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@OrderStatus", newStatus);
-                    command.Parameters.AddWithValue("@OrderID", orderID);
+                    SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
+                    adapter.SelectCommand.Parameters.AddWithValue("@OrderID", orderID);
 
-                    connection.Open();
-                    command.ExecuteNonQuery();
+                    orderDetailsTable.Clear(); // Clear the previous details
+                    adapter.Fill(orderDetailsTable); // Fill the DataTable with data
+
+                    dgvOrderDetails.DataSource = orderDetailsTable; // Bind the DataGridView to the DataTable
                 }
-
-                MessageBox.Show("Order status updated successfully!");
-
-                // Refresh the order table to reflect the changes
-                LoadOrders();
-            }
-            else
-            {
-                MessageBox.Show("Please select an order to update.");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading data: " + ex.Message);
+                }
             }
         }
     }

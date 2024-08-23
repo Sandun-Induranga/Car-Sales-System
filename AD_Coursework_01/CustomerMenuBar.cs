@@ -44,9 +44,9 @@ namespace AD_Coursework_01
             LoadContentIntoPanel(new OrderForm());
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
+        private void btnOrderDetails_Click(object sender, EventArgs e)
         {
-
+            LoadContentIntoPanel(new OrderDetailsForm());
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

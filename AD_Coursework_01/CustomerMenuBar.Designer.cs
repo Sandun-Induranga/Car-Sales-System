@@ -32,7 +32,7 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
+            this.btnOrderDetails = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCarParts = new System.Windows.Forms.Button();
             this.btnCars = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Controls.Add(this.btnProfile);
+            this.panel2.Controls.Add(this.btnOrderDetails);
             this.panel2.Controls.Add(this.btnOrders);
             this.panel2.Controls.Add(this.btnCarParts);
             this.panel2.Controls.Add(this.btnCars);
@@ -96,23 +96,23 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnProfile
+            // btnOrderDetails
             // 
-            this.btnProfile.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProfile.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProfile.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
-            this.btnProfile.FlatAppearance.BorderSize = 0;
-            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.ForeColor = System.Drawing.Color.White;
-            this.btnProfile.Location = new System.Drawing.Point(0, 172);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(233, 43);
-            this.btnProfile.TabIndex = 5;
-            this.btnProfile.Text = "My Profile";
-            this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            this.btnOrderDetails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOrderDetails.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOrderDetails.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnOrderDetails.FlatAppearance.BorderSize = 0;
+            this.btnOrderDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrderDetails.ForeColor = System.Drawing.Color.White;
+            this.btnOrderDetails.Location = new System.Drawing.Point(0, 172);
+            this.btnOrderDetails.Name = "btnOrderDetails";
+            this.btnOrderDetails.Size = new System.Drawing.Size(233, 43);
+            this.btnOrderDetails.TabIndex = 5;
+            this.btnOrderDetails.Text = "My Orders";
+            this.btnOrderDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOrderDetails.UseVisualStyleBackColor = true;
+            this.btnOrderDetails.Click += new System.EventHandler(this.btnOrderDetails_Click);
             // 
             // btnOrders
             // 
@@ -127,7 +127,7 @@
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(233, 43);
             this.btnOrders.TabIndex = 4;
-            this.btnOrders.Text = "My Orders";
+            this.btnOrders.Text = "Purchase Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrders.UseVisualStyleBackColor = true;
             this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
@@ -189,7 +189,7 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnProfile;
+        private System.Windows.Forms.Button btnOrderDetails;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnCarParts;
         private System.Windows.Forms.Button btnCars;
