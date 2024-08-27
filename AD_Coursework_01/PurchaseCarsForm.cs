@@ -16,7 +16,54 @@ namespace AD_Coursework_01
         {
             base.OnLoad(e);
             LoadAllCars();
+            GenerateCarId(); // Generate Car ID when the form loads
             tblCars.CellClick += tblCars_CellClick;
+        }
+
+        private void GenerateCarId()
+        {
+            string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = new SqlCommand("SELECT TOP 1 carId FROM Car ORDER BY carId DESC", con))
+                    {
+                        var lastCarId = cmd.ExecuteScalar() as string;
+                        if (lastCarId != null)
+                        {
+                            // Extract the numeric part of the Car ID and increment it
+                            int newIdNumber = int.Parse(lastCarId.Substring(4)) + 1;
+                            txtId.Text = "CAR-" + newIdNumber.ToString("D3"); // Format with leading zeros
+                        }
+                        else
+                        {
+                            // If no records are found, start with CAR-001
+                            txtId.Text = "CAR-001";
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error generating Car ID: " + ex.Message);
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // Clear all the text fields
+            txtBrand.Clear();
+            txtModel.Clear();
+            txtYear.Clear();
+            txtColor.Clear();
+            txtPrice.Clear();
+            txtQtyOnHand.Clear();
+
+            // Generate a new Car ID
+            GenerateCarId();
         }
 
         private void LoadAllCars()
@@ -59,12 +106,9 @@ namespace AD_Coursework_01
 
         private void tblCars_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Check if the clicked row index is validif (e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                // Get the selected row
                 DataGridViewRow row = tblCars.Rows[e.RowIndex];
-
-                // Populate text fields with data from the selected row
                 txtId.Text = row.Cells["carId"].Value.ToString().Trim();
                 txtBrand.Text = row.Cells["brand"].Value.ToString().Trim();
                 txtModel.Text = row.Cells["model"].Value.ToString().Trim();
@@ -115,10 +159,10 @@ namespace AD_Coursework_01
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE Car SET brand = @brand, model = @model, year = @year, color = @color, price = @price, qtyOnHand = @qtyOnHand WHERE CarId = @CarId", con))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Car SET brand = @brand, model = @model, year = @year, color = @color, price = @price, qtyOnHand = @qtyOnHand WHERE carId = @carId", con))
                     {
                         con.Open();
-                        cmd.Parameters.AddWithValue("@CarId", txtId.Text); // Assuming CarId is stored in txtCarId
+                        cmd.Parameters.AddWithValue("@carId", txtId.Text);
                         cmd.Parameters.AddWithValue("@brand", txtBrand.Text);
                         cmd.Parameters.AddWithValue("@model", txtModel.Text);
                         cmd.Parameters.AddWithValue("@year", txtYear.Text);
@@ -129,7 +173,9 @@ namespace AD_Coursework_01
                         cmd.ExecuteNonQuery();
                     }
                 }
-                LoadAllCars(); // Reload the data in the DataGridView
+
+                MessageBox.Show("Car updated successfully.");
+                LoadAllCars();
             }
             catch (Exception ex)
             {
@@ -143,20 +189,20 @@ namespace AD_Coursework_01
 
             try
             {
-                // Confirm if the user wants to delete the car
                 if (MessageBox.Show("Are you sure you want to delete this car?", "Confirm Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        using (SqlCommand cmd = new SqlCommand("DELETE FROM Car WHERE CarId = @CarId", con))
+                        using (SqlCommand cmd = new SqlCommand("DELETE FROM Car WHERE carId = @carId", con))
                         {
                             con.Open();
-                            cmd.Parameters.AddWithValue("@CarId", txtId.Text); // Assuming CarId is stored in txtCarId
+                            cmd.Parameters.AddWithValue("@carId", txtId.Text);
                             cmd.ExecuteNonQuery();
                         }
                     }
-                    LoadAllCars(); // Reload the data in the DataGridView
+
                     MessageBox.Show("Car deleted successfully.");
+                    LoadAllCars();
                 }
             }
             catch (Exception ex)

@@ -32,7 +32,7 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnOrderDetails = new System.Windows.Forms.Button();
+            this.btnReports = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCarParts = new System.Windows.Forms.Button();
             this.btnCars = new System.Windows.Forms.Button();
@@ -68,7 +68,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.btnLogout);
-            this.panel2.Controls.Add(this.btnOrderDetails);
+            this.panel2.Controls.Add(this.btnReports);
             this.panel2.Controls.Add(this.btnOrders);
             this.panel2.Controls.Add(this.btnCarParts);
             this.panel2.Controls.Add(this.btnCars);
@@ -95,22 +95,23 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
             // 
-            // btnOrderDetails
+            // btnReports
             // 
-            this.btnOrderDetails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOrderDetails.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOrderDetails.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
-            this.btnOrderDetails.FlatAppearance.BorderSize = 0;
-            this.btnOrderDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOrderDetails.ForeColor = System.Drawing.Color.White;
-            this.btnOrderDetails.Location = new System.Drawing.Point(0, 172);
-            this.btnOrderDetails.Name = "btnOrderDetails";
-            this.btnOrderDetails.Size = new System.Drawing.Size(233, 43);
-            this.btnOrderDetails.TabIndex = 5;
-            this.btnOrderDetails.Text = "My Orders";
-            this.btnOrderDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOrderDetails.UseVisualStyleBackColor = true;
+            this.btnReports.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReports.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnReports.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnReports.FlatAppearance.BorderSize = 0;
+            this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReports.ForeColor = System.Drawing.Color.White;
+            this.btnReports.Location = new System.Drawing.Point(0, 172);
+            this.btnReports.Name = "btnReports";
+            this.btnReports.Size = new System.Drawing.Size(233, 43);
+            this.btnReports.TabIndex = 5;
+            this.btnReports.Text = "Reports";
+            this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnOrders
             // 
@@ -187,7 +188,7 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnOrderDetails;
+        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnOrders;
         private System.Windows.Forms.Button btnCarParts;
         private System.Windows.Forms.Button btnCars;

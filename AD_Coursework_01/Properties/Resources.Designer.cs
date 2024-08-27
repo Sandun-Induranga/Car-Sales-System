@@ -79,5 +79,25 @@ namespace AD_Coursework_01.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wavy_Tech_28_Single_10 {
+            get {
+                object obj = ResourceManager.GetObject("Wavy_Tech-28_Single-10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Wavy_Tech_28_Single_101 {
+            get {
+                object obj = ResourceManager.GetObject("Wavy_Tech-28_Single-101", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

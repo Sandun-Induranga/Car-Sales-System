@@ -49,5 +49,10 @@ namespace AD_Coursework_01
         {
             LoadContentIntoPanel(new OrderDetailsForm());
         }
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            LoadContentIntoPanel(new GenerateReportForm());
+        }
     }
 }
