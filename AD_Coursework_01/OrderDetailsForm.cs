@@ -52,13 +52,13 @@ namespace AD_Coursework_01
             if (dgvOrders.SelectedRows.Count > 0)
             {
                 var selectedRow = dgvOrders.SelectedRows[0];
-                int orderID = Convert.ToInt32(selectedRow.Cells["OrderID"].Value);
+                string orderID = selectedRow.Cells["OrderID"].Value.ToString();
 
                 LoadOrderDetails(orderID); // Load order details based on selected OrderID
             }
         }
 
-        private void LoadOrderDetails(int orderID)
+        private void LoadOrderDetails(string orderID)
         {
             // Load order details into a DataGridView
             string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;

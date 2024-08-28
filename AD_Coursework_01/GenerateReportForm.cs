@@ -95,7 +95,7 @@ namespace AD_Coursework_01
                 // Add data rows
                 for (int i = 0; i < orderTable.Rows.Count; i++)
                 {
-                    worksheet.Cell(i + 2, 1).Value = (int)orderTable.Rows[i]["OrderID"];
+                    worksheet.Cell(i + 2, 1).Value = (string)orderTable.Rows[i]["OrderID"];
                     worksheet.Cell(i + 2, 2).Value = (int)orderTable.Rows[i]["CustomerID"];
                     worksheet.Cell(i + 2, 3).Value = (DateTime)orderTable.Rows[i]["OrderDate"];
                     worksheet.Cell(i + 2, 4).Value = (decimal)orderTable.Rows[i]["TotalAmount"];

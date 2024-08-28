@@ -18,8 +18,8 @@ namespace AD_Coursework_01
             // Connection string to your SQL Server database
             string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
 
-            // SQL query to check the credentials and retrieve the user role
-            string query = "SELECT Role FROM [User] WHERE Username = @Username AND Password = @Password";
+            // SQL query to check the credentials and retrieve the user role and CustomerID
+            string query = "SELECT Role, (SELECT CustomerID FROM Customer WHERE Username = @Username) AS CustomerID FROM [User] WHERE Username = @Username AND Password = @Password";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -30,32 +30,39 @@ namespace AD_Coursework_01
                 try
                 {
                     connection.Open();
-                    string role = (string)command.ExecuteScalar();
-
-                    if (role != null)
+                    using (SqlDataReader reader = command.ExecuteReader())
                     {
-                        // Login successful, check role
-                        if (role == "Admin")
+                        if (reader.Read())
                         {
-                            // Redirect to Admin form
-                            MessageBox.Show("Login successful! Redirecting to Admin Dashboard.");
-                            AdminMenuBar adminMenuBar = new AdminMenuBar();
-                            adminMenuBar.Show();
-                        }
-                        else if (role == "Customer")
-                        {
-                            // Redirect to Customer form
-                            MessageBox.Show("Login successful! Redirecting to Customer Dashboard.");
-                            CustomerMenuBar customerDashboard = new CustomerMenuBar();
-                            customerDashboard.Show();
-                        }
+                            string role = reader["Role"].ToString();
+                            string customerId = reader["CustomerID"].ToString(); // Null if the user is not a customer
 
-                        this.Hide(); // Hide the login form
-                    }
-                    else
-                    {   
-                        // Login failed
-                        MessageBox.Show("Invalid username or password.");
+                            if (role != null)
+                            {
+                                // Login successful, check role
+                                if (role == "Admin")
+                                {
+                                    // Redirect to Admin form
+                                    MessageBox.Show("Login successful! Redirecting to Admin Dashboard.");
+                                    AdminMenuBar adminMenuBar = new AdminMenuBar();
+                                    adminMenuBar.Show();
+                                }
+                                else if (role == "Customer")
+                                {
+                                    // Redirect to Customer form and pass the CustomerID
+                                    MessageBox.Show("Login successful! Redirecting to Customer Dashboard.");
+                                    CustomerMenuBar customerDashboard = new CustomerMenuBar(customerId); // Pass CustomerID
+                                    customerDashboard.Show();
+                                }
+
+                                this.Hide(); // Hide the login form
+                            }
+                        }
+                        else
+                        {
+                            // Login failed
+                            MessageBox.Show("Invalid username or password.");
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -65,7 +72,7 @@ namespace AD_Coursework_01
             }
         }
 
-        private void BtnSignUp_Click(object sender, EventArgs e)
+            private void BtnSignUp_Click(object sender, EventArgs e)
         {
             // Transition to the Sign Up form
             RegistrationForm registrationForm = new RegistrationForm();

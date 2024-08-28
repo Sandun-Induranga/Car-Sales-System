@@ -5,10 +5,12 @@ namespace AD_Coursework_01
 {
     public partial class CustomerMenuBar : Form
     {
-        public CustomerMenuBar()
+        private string customerId;
+        public CustomerMenuBar(string customerId)
         {
             InitializeComponent();
             LoadContentIntoPanel(new CustomerDashboard());
+            this.customerId = customerId;
         }
 
         private void LoadContentIntoPanel(UserControl userControl)
@@ -51,7 +53,9 @@ namespace AD_Coursework_01
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-          
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+            this.Close();
         }
     }
 }
