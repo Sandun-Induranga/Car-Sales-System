@@ -35,8 +35,8 @@
             this.dgvOrderDetails = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCusName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblMobile = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).BeginInit();
@@ -75,8 +75,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblMobile);
+            this.panel1.Controls.Add(this.lblAddress);
             this.panel1.Controls.Add(this.lblCusName);
             this.panel1.Location = new System.Drawing.Point(456, 45);
             this.panel1.Name = "panel1";
@@ -92,23 +92,23 @@
             this.lblCusName.TabIndex = 0;
             this.lblCusName.Text = "Customer Name: -";
             // 
-            // label2
+            // lblAddress
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(27, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Address: -";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Location = new System.Drawing.Point(27, 53);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(54, 13);
+            this.lblAddress.TabIndex = 0;
+            this.lblAddress.Text = "Address: -";
             // 
-            // label3
+            // lblMobile
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(27, 75);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Mobile: -";
+            this.lblMobile.AutoSize = true;
+            this.lblMobile.Location = new System.Drawing.Point(27, 75);
+            this.lblMobile.Name = "lblMobile";
+            this.lblMobile.Size = new System.Drawing.Size(47, 13);
+            this.lblMobile.TabIndex = 0;
+            this.lblMobile.Text = "Mobile: -";
             // 
             // lblEmail
             // 
@@ -146,8 +146,8 @@
         private System.Windows.Forms.DataGridView dgvOrderDetails;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblMobile;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblCusName;
     }
 }

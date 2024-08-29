@@ -35,7 +35,6 @@ namespace AD_Coursework_01
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                     orderTable.Clear(); // Clear the previous orders
                     adapter.Fill(orderTable); // Fill the DataTable with data
-                    MessageBox.Show(orderTable.Rows.Count.ToString());
 
                     dgvOrders.DataSource = orderTable; // Bind the DataGridView to the DataTable
                 }
@@ -48,13 +47,14 @@ namespace AD_Coursework_01
 
         private void dgvOrders_SelectionChanged(object sender, EventArgs e)
         {
-            // Load order details when an order is selected
             if (dgvOrders.SelectedRows.Count > 0)
             {
                 var selectedRow = dgvOrders.SelectedRows[0];
                 string orderID = selectedRow.Cells["OrderID"].Value.ToString();
+                string customerID = selectedRow.Cells["CustomerID"].Value.ToString();
 
                 LoadOrderDetails(orderID); // Load order details based on selected OrderID
+                LoadCustomerDetails(customerID); // Load customer details based on CustomerID
             }
         }
 
@@ -79,6 +79,46 @@ namespace AD_Coursework_01
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error loading data: " + ex.Message);
+                }
+            }
+        }
+
+        private void LoadCustomerDetails(string customerID)
+        {
+            string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
+            string query = "SELECT FirstName, LastName, Address, Phone, Email FROM Customer WHERE CustomerID = @CustomerID";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@CustomerID", customerID);
+
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        lblCusName.Text = $"Customer Name: {reader["FirstName"]} {reader["LastName"]}";
+                        lblAddress.Text = $"Address: {reader["Address"]}";
+                        lblMobile.Text = $"Mobile: {reader["Phone"]}";
+                        lblEmail.Text = $"Email: {reader["Email"]}";
+                    }
+                    else
+                    {
+                        // Clear the labels if no customer data is found
+                        lblCusName.Text = string.Empty;
+                        lblAddress.Text = string.Empty;
+                        lblMobile.Text = string.Empty;
+                        lblEmail.Text = string.Empty;
+                    }
+
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading customer details: " + ex.Message);
                 }
             }
         }
