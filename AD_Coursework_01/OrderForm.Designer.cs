@@ -31,7 +31,6 @@
             this.dgvCart = new System.Windows.Forms.DataGridView();
             this.dgvAvailableCars = new System.Windows.Forms.DataGridView();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnFinalizePurchase = new System.Windows.Forms.Button();
             this.txtCarID = new System.Windows.Forms.TextBox();
             this.txtCarName = new System.Windows.Forms.TextBox();
@@ -41,6 +40,9 @@
             this.btnRemoveFromCart = new System.Windows.Forms.Button();
             this.txtCarSearch = new System.Windows.Forms.TextBox();
             this.txtCarPartSearch = new System.Windows.Forms.TextBox();
+            this.btnAddToCart = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableCars)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
@@ -49,6 +51,7 @@
             // 
             // dgvCart
             // 
+            this.dgvCart.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCart.Location = new System.Drawing.Point(53, 339);
             this.dgvCart.Name = "dgvCart";
@@ -57,6 +60,7 @@
             // 
             // dgvAvailableCars
             // 
+            this.dgvAvailableCars.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvAvailableCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvailableCars.Location = new System.Drawing.Point(49, 84);
             this.dgvAvailableCars.Name = "dgvAvailableCars";
@@ -70,23 +74,17 @@
             this.nudQuantity.Size = new System.Drawing.Size(215, 20);
             this.nudQuantity.TabIndex = 1;
             // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.Location = new System.Drawing.Point(579, 280);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart.TabIndex = 2;
-            this.btnAddToCart.Text = "Cart";
-            this.btnAddToCart.UseVisualStyleBackColor = true;
-            // 
             // btnFinalizePurchase
             // 
-            this.btnFinalizePurchase.Location = new System.Drawing.Point(687, 518);
+            this.btnFinalizePurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
+            this.btnFinalizePurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizePurchase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFinalizePurchase.Location = new System.Drawing.Point(671, 514);
             this.btnFinalizePurchase.Name = "btnFinalizePurchase";
-            this.btnFinalizePurchase.Size = new System.Drawing.Size(75, 23);
+            this.btnFinalizePurchase.Size = new System.Drawing.Size(91, 32);
             this.btnFinalizePurchase.TabIndex = 2;
             this.btnFinalizePurchase.Text = "Purchase";
-            this.btnFinalizePurchase.UseVisualStyleBackColor = true;
+            this.btnFinalizePurchase.UseVisualStyleBackColor = false;
             // 
             // txtCarID
             // 
@@ -111,6 +109,7 @@
             // 
             // dgvAvailableParts
             // 
+            this.dgvAvailableParts.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvAvailableParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvailableParts.Location = new System.Drawing.Point(411, 84);
             this.dgvAvailableParts.Name = "dgvAvailableParts";
@@ -120,20 +119,24 @@
             // lblItemType
             // 
             this.lblItemType.AutoSize = true;
-            this.lblItemType.Location = new System.Drawing.Point(474, 285);
+            this.lblItemType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblItemType.Location = new System.Drawing.Point(291, 282);
             this.lblItemType.Name = "lblItemType";
-            this.lblItemType.Size = new System.Drawing.Size(35, 13);
+            this.lblItemType.Size = new System.Drawing.Size(50, 16);
             this.lblItemType.TabIndex = 4;
             this.lblItemType.Text = "label1";
             // 
             // btnRemoveFromCart
             // 
-            this.btnRemoveFromCart.Location = new System.Drawing.Point(687, 280);
+            this.btnRemoveFromCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(111)))), ((int)(((byte)(81)))));
+            this.btnRemoveFromCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveFromCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnRemoveFromCart.Location = new System.Drawing.Point(644, 277);
             this.btnRemoveFromCart.Name = "btnRemoveFromCart";
-            this.btnRemoveFromCart.Size = new System.Drawing.Size(75, 23);
+            this.btnRemoveFromCart.Size = new System.Drawing.Size(118, 32);
             this.btnRemoveFromCart.TabIndex = 5;
             this.btnRemoveFromCart.Text = "Remove";
-            this.btnRemoveFromCart.UseVisualStyleBackColor = true;
+            this.btnRemoveFromCart.UseVisualStyleBackColor = false;
             this.btnRemoveFromCart.Click += new System.EventHandler(this.btnRemoveFromCart_Click);
             // 
             // txtCarSearch
@@ -150,6 +153,40 @@
             this.txtCarPartSearch.Size = new System.Drawing.Size(247, 20);
             this.txtCarPartSearch.TabIndex = 6;
             // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(196)))), ((int)(((byte)(106)))));
+            this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddToCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAddToCart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnAddToCart.Location = new System.Drawing.Point(511, 277);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(127, 32);
+            this.btnAddToCart.TabIndex = 2;
+            this.btnAddToCart.Text = "Add to Cart";
+            this.btnAddToCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddToCart.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 522);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Total:";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Location = new System.Drawing.Point(103, 522);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(15, 16);
+            this.lblTotal.TabIndex = 4;
+            this.lblTotal.Text = "0";
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +194,8 @@
             this.Controls.Add(this.txtCarPartSearch);
             this.Controls.Add(this.txtCarSearch);
             this.Controls.Add(this.btnRemoveFromCart);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblItemType);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtCarName);
@@ -193,5 +232,7 @@
         private System.Windows.Forms.Button btnRemoveFromCart;
         private System.Windows.Forms.TextBox txtCarSearch;
         private System.Windows.Forms.TextBox txtCarPartSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

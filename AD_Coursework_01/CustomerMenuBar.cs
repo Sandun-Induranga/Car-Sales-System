@@ -43,7 +43,7 @@ namespace AD_Coursework_01
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            LoadContentIntoPanel(new OrderForm());
+            LoadContentIntoPanel(new OrderForm(customerId));
         }
 
         private void btnOrderDetails_Click(object sender, EventArgs e)

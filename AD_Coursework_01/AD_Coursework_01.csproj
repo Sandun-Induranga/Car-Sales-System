@@ -299,5 +299,8 @@
   <ItemGroup>
     <None Include="Resources\Wavy_Tech-28_Single-101.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cart-64.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
