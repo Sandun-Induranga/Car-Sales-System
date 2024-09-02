@@ -39,16 +39,16 @@
             // 
             this.btnGenerateIncomeReport.Location = new System.Drawing.Point(350, 162);
             this.btnGenerateIncomeReport.Name = "btnGenerateIncomeReport";
-            this.btnGenerateIncomeReport.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerateIncomeReport.Size = new System.Drawing.Size(166, 23);
             this.btnGenerateIncomeReport.TabIndex = 0;
-            this.btnGenerateIncomeReport.Text = "button1";
+            this.btnGenerateIncomeReport.Text = "Generate Report";
             this.btnGenerateIncomeReport.UseVisualStyleBackColor = true;
             // 
             // btnGenerateMonthlyReport
             // 
             this.btnGenerateMonthlyReport.Location = new System.Drawing.Point(350, 233);
             this.btnGenerateMonthlyReport.Name = "btnGenerateMonthlyReport";
-            this.btnGenerateMonthlyReport.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerateMonthlyReport.Size = new System.Drawing.Size(166, 23);
             this.btnGenerateMonthlyReport.TabIndex = 0;
             this.btnGenerateMonthlyReport.Text = "button1";
             this.btnGenerateMonthlyReport.UseVisualStyleBackColor = true;
@@ -57,7 +57,7 @@
             // 
             this.btnGenerateAnnualReport.Location = new System.Drawing.Point(350, 313);
             this.btnGenerateAnnualReport.Name = "btnGenerateAnnualReport";
-            this.btnGenerateAnnualReport.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerateAnnualReport.Size = new System.Drawing.Size(166, 23);
             this.btnGenerateAnnualReport.TabIndex = 0;
             this.btnGenerateAnnualReport.Text = "button1";
             this.btnGenerateAnnualReport.UseVisualStyleBackColor = true;

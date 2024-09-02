@@ -29,26 +29,19 @@ namespace AD_Coursework_01
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             LoadContentIntoPanel(new CustomerDashboard());
-        }
-
-        private void btnCars_Click(object sender, EventArgs e)
-        {
-            LoadContentIntoPanel(new PurchaseCarsForm());
-        }
-
-        private void btnCarParts_Click(object sender, EventArgs e)
-        {
-            LoadContentIntoPanel(new CarPartsForm());
+            lblTitle.Text = "Customer/Dashboard";
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
             LoadContentIntoPanel(new OrderForm(customerId));
+            lblTitle.Text = "Customer/Purchase Orders";
         }
 
         private void btnOrderDetails_Click(object sender, EventArgs e)
         {
-            LoadContentIntoPanel(new OrderDetailsForm());
+            LoadContentIntoPanel(new OrderDetailsForm(customerId));
+            lblTitle.Text = "Customer/Order Details";
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

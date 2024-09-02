@@ -10,15 +10,19 @@ namespace AD_Coursework_01
         private DataTable orderTable = new DataTable(); // DataTable to hold orders
         private DataTable orderDetailsTable = new DataTable(); // DataTable to hold order details
 
-        public OrderDetailsForm()
+        // Property to hold CustomerID (nullable)
+        private string CustomerID { get; set; }
+
+        public OrderDetailsForm(string customerId)
         {
             InitializeComponent();
+            this.CustomerID = customerId; // Set CustomerID to null by default
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
-            LoadOrders(); // Load all orders on form load
+            LoadOrders(); // Load all orders or orders for a specific customer on form load
             dgvOrders.SelectionChanged += dgvOrders_SelectionChanged; // Load order details when an order is selected
         }
 
@@ -28,12 +32,24 @@ namespace AD_Coursework_01
             string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
             string query = "SELECT OrderID, CustomerID, OrderDate, TotalAmount, OrderStatus FROM [Order]";
 
+            // If a CustomerID is provided, filter the query
+            if (!string.IsNullOrEmpty(CustomerID))
+            {
+                query += " WHERE CustomerID = @CustomerID";
+            }
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
                 {
                     SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                     orderTable.Clear(); // Clear the previous orders
+
+                    if (!string.IsNullOrEmpty(CustomerID))
+                    {
+                        adapter.SelectCommand.Parameters.AddWithValue("@CustomerID", CustomerID);
+                    }
+
                     adapter.Fill(orderTable); // Fill the DataTable with data
 
                     dgvOrders.DataSource = orderTable; // Bind the DataGridView to the DataTable

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AD_Coursework_01
@@ -33,26 +26,31 @@ namespace AD_Coursework_01
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             LoadContentIntoPanel(new CustomerDashboard());
+            lblTitle.Text = "Admin/Dashboard";
         }
 
         private void btnCars_Click(object sender, EventArgs e)
         {
             LoadContentIntoPanel(new PurchaseCarsForm());
+            lblTitle.Text = "Admin/Manage Cars";
         }
 
         private void btnCarParts_Click(object sender, EventArgs e)
         {
             LoadContentIntoPanel(new CarPartsForm());
+            lblTitle.Text = "Admin/Manage Car Parts";
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-            LoadContentIntoPanel(new OrderDetailsForm());
+            LoadContentIntoPanel(new OrderDetailsForm(null));
+            lblTitle.Text = "Admin/Manage Orders";
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
             LoadContentIntoPanel(new GenerateReportForm());
+            lblTitle.Text = "Admin/Generate Reports";
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
