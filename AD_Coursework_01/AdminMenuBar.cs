@@ -5,9 +5,11 @@ namespace AD_Coursework_01
 {
     public partial class AdminMenuBar : Form
     {
-        public AdminMenuBar()
+        public AdminMenuBar(string username)
         {
             InitializeComponent();
+            LoadContentIntoPanel(new CustomerDashboard());
+            lblUsername.Text = username;
         }
 
         private void LoadContentIntoPanel(UserControl userControl)

@@ -24,7 +24,7 @@ namespace AD_Coursework_01
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Username", txtEmail.Text); // Assuming txtEmail.Text holds the username
+                command.Parameters.AddWithValue("@Username", txtUsername.Text); // Assuming txtEmail.Text holds the username
                 command.Parameters.AddWithValue("@Password", HashPassword(txtPassword.Text)); // Hash the password before checking
 
                 try
@@ -44,14 +44,14 @@ namespace AD_Coursework_01
                                 {
                                     // Redirect to Admin form
                                     MessageBox.Show("Login successful! Redirecting to Admin Dashboard.");
-                                    AdminMenuBar adminMenuBar = new AdminMenuBar();
+                                    AdminMenuBar adminMenuBar = new AdminMenuBar(txtUsername.Text);
                                     adminMenuBar.Show();
                                 }
                                 else if (role == "Customer")
                                 {
                                     // Redirect to Customer form and pass the CustomerID
                                     MessageBox.Show("Login successful! Redirecting to Customer Dashboard.");
-                                    CustomerMenuBar customerDashboard = new CustomerMenuBar(customerId, txtEmail.Text); // Pass CustomerID
+                                    CustomerMenuBar customerDashboard = new CustomerMenuBar(customerId, txtUsername.Text); // Pass CustomerID
                                     customerDashboard.Show();
                                 }
 
