@@ -43,14 +43,12 @@ namespace AD_Coursework_01
                                 if (role == "Admin")
                                 {
                                     // Redirect to Admin form
-                                    MessageBox.Show("Login successful! Redirecting to Admin Dashboard.");
                                     AdminMenuBar adminMenuBar = new AdminMenuBar(txtUsername.Text);
                                     adminMenuBar.Show();
                                 }
                                 else if (role == "Customer")
                                 {
                                     // Redirect to Customer form and pass the CustomerID
-                                    MessageBox.Show("Login successful! Redirecting to Customer Dashboard.");
                                     CustomerMenuBar customerDashboard = new CustomerMenuBar(customerId, txtUsername.Text); // Pass CustomerID
                                     customerDashboard.Show();
                                 }

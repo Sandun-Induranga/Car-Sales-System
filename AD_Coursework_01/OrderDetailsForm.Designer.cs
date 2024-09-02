@@ -50,7 +50,7 @@
             // dgvOrders
             // 
             this.dgvOrders.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrders.Location = new System.Drawing.Point(59, 183);
+            this.dgvOrders.Location = new System.Drawing.Point(112, 183);
             this.dgvOrders.Name = "dgvOrders";
             this.dgvOrders.Size = new System.Drawing.Size(695, 141);
             this.dgvOrders.TabIndex = 0;
@@ -68,7 +68,7 @@
             // dgvOrderDetails
             // 
             this.dgvOrderDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvOrderDetails.Location = new System.Drawing.Point(59, 362);
+            this.dgvOrderDetails.Location = new System.Drawing.Point(112, 362);
             this.dgvOrderDetails.Name = "dgvOrderDetails";
             this.dgvOrderDetails.Size = new System.Drawing.Size(695, 141);
             this.dgvOrderDetails.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.panelCustomer.Controls.Add(this.lblMobile);
             this.panelCustomer.Controls.Add(this.lblAddress);
             this.panelCustomer.Controls.Add(this.lblCusName);
-            this.panelCustomer.Location = new System.Drawing.Point(374, 45);
+            this.panelCustomer.Location = new System.Drawing.Point(427, 45);
             this.panelCustomer.Name = "panelCustomer";
             this.panelCustomer.Size = new System.Drawing.Size(380, 129);
             this.panelCustomer.TabIndex = 1;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.dgvOrderDetails);
             this.Controls.Add(this.dgvOrders);
             this.Name = "OrderDetailsForm";
-            this.Size = new System.Drawing.Size(807, 571);
+            this.Size = new System.Drawing.Size(929, 610);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abc_car_tradersDataSet)).EndInit();
