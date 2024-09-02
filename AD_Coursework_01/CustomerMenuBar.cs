@@ -6,11 +6,14 @@ namespace AD_Coursework_01
     public partial class CustomerMenuBar : Form
     {
         private string customerId;
-        public CustomerMenuBar(string customerId)
+        private string username;
+        public CustomerMenuBar(string customerId, string username)
         {
             InitializeComponent();
             LoadContentIntoPanel(new CustomerDashboard());
             this.customerId = customerId;
+            this.username = username;
+            lblUsername.Text = username;
         }
 
         private void LoadContentIntoPanel(UserControl userControl)

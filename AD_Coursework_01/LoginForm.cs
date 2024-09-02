@@ -51,7 +51,7 @@ namespace AD_Coursework_01
                                 {
                                     // Redirect to Customer form and pass the CustomerID
                                     MessageBox.Show("Login successful! Redirecting to Customer Dashboard.");
-                                    CustomerMenuBar customerDashboard = new CustomerMenuBar(customerId); // Pass CustomerID
+                                    CustomerMenuBar customerDashboard = new CustomerMenuBar(customerId, txtEmail.Text); // Pass CustomerID
                                     customerDashboard.Show();
                                 }
 
