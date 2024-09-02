@@ -120,7 +120,7 @@ namespace AD_Coursework_01
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO CarPart (PartId, Name, Price, QtyOnHand) VALUES (@PartId, @Name, @Price, @QtyOnHand)", con))
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO CarPart (PartId, PartName, Price, QtyOnHand) VALUES (@PartId, @Name, @Price, @QtyOnHand)", con))
                     {
                         con.Open();
                         cmd.Parameters.AddWithValue("@PartId", txtId.Text);
@@ -149,11 +149,11 @@ namespace AD_Coursework_01
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE CarPart SET Name = @Name, Price = @Price, QtyOnHand = @QtyOnHand WHERE PartId = @PartId", con))
+                    using (SqlCommand cmd = new SqlCommand("UPDATE CarPart SET PartName = @PartName, Price = @Price, QtyOnHand = @QtyOnHand WHERE PartId = @PartId", con))
                     {
                         con.Open();
                         cmd.Parameters.AddWithValue("@PartId", txtId.Text);
-                        cmd.Parameters.AddWithValue("@Name", txtName.Text);
+                        cmd.Parameters.AddWithValue("@PartName", txtName.Text);
                         cmd.Parameters.AddWithValue("@Price", txtUnitPrice.Text);
                         cmd.Parameters.AddWithValue("@QtyOnHand", txtQtyOnHand.Text);
 
