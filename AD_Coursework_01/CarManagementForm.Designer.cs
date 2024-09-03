@@ -1,6 +1,6 @@
 ﻿namespace AD_Coursework_01
 {
-    partial class PurchaseCarsForm
+    partial class CarManagementForm
     {
         /// <summary> 
         /// Required designer variable.

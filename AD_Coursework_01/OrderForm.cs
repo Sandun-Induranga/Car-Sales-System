@@ -26,11 +26,11 @@ namespace AD_Coursework_01
             base.OnLoad(e);
             dgvAvailableCars.SelectionChanged += dgvAvailableCars_SelectionChanged; // Event when a car row is clicked
             dgvAvailableParts.SelectionChanged += dgvAvailableParts_SelectionChanged; // Event when a part row is clicked
-            btnAddToCart.Click += btnAddToCart_Click;
-            btnRemoveFromCart.Click += btnRemoveFromCart_Click;
-            btnFinalizePurchase.Click += btnFinalizePurchase_Click;
-            txtCarSearch.TextChanged += TxtCarSearch_TextChanged;
-            txtCarPartSearch.TextChanged += TxtCarPartsSearch_TextChanged;
+            btnAddToCart.Click += btnAddToCart_Click; // Add item to cart
+            btnRemoveFromCart.Click += btnRemoveFromCart_Click; // Remove item from cart
+            btnFinalizePurchase.Click += btnFinalizePurchase_Click; // Finalize the purchase
+            txtCarSearch.TextChanged += TxtCarSearch_TextChanged; // Search for cars
+            txtCarPartSearch.TextChanged += TxtCarPartsSearch_TextChanged; // Search for car parts
         }
 
         private void InitializeCart()

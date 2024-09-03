@@ -31,25 +31,25 @@
             this.btnGenerateIncomeReport = new System.Windows.Forms.Button();
             this.btnGenerateMonthlyReport = new System.Windows.Forms.Button();
             this.btnGenerateAnnualReport = new System.Windows.Forms.Button();
-            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblReportTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblReportTitle = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnGenerateIncomeReport
@@ -91,19 +91,19 @@
             this.btnGenerateAnnualReport.Text = "Generate Report";
             this.btnGenerateAnnualReport.UseVisualStyleBackColor = false;
             // 
-            // dtpStartDate
-            // 
-            this.dtpStartDate.Location = new System.Drawing.Point(416, 85);
-            this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpStartDate.TabIndex = 1;
-            // 
             // dtpEndDate
             // 
-            this.dtpEndDate.Location = new System.Drawing.Point(416, 43);
+            this.dtpEndDate.Location = new System.Drawing.Point(416, 85);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(200, 20);
-            this.dtpEndDate.TabIndex = 2;
+            this.dtpEndDate.TabIndex = 1;
+            // 
+            // dtpStartDate
+            // 
+            this.dtpStartDate.Location = new System.Drawing.Point(416, 43);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpStartDate.TabIndex = 2;
             // 
             // panel1
             // 
@@ -112,13 +112,53 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblReportTitle);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.dtpStartDate);
             this.panel1.Controls.Add(this.dtpEndDate);
+            this.panel1.Controls.Add(this.dtpStartDate);
             this.panel1.Controls.Add(this.btnGenerateIncomeReport);
             this.panel1.Location = new System.Drawing.Point(119, 49);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(678, 178);
             this.panel1.TabIndex = 3;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label4.Location = new System.Drawing.Point(414, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(20, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "To";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label3.Location = new System.Drawing.Point(413, 27);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(30, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "From";
+            // 
+            // lblReportTitle
+            // 
+            this.lblReportTitle.AutoSize = true;
+            this.lblReportTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportTitle.Location = new System.Drawing.Point(92, 15);
+            this.lblReportTitle.Name = "lblReportTitle";
+            this.lblReportTitle.Size = new System.Drawing.Size(172, 20);
+            this.lblReportTitle.TabIndex = 4;
+            this.lblReportTitle.Text = "Custom Date Range";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AD_Coursework_01.Properties.Resources.icons8_reports_100;
+            this.pictureBox1.Location = new System.Drawing.Point(95, 50);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -131,27 +171,6 @@
             this.panel2.Size = new System.Drawing.Size(678, 155);
             this.panel2.TabIndex = 4;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.btnGenerateAnnualReport);
-            this.panel3.Location = new System.Drawing.Point(119, 441);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(678, 155);
-            this.panel3.TabIndex = 5;
-            // 
-            // lblReportTitle
-            // 
-            this.lblReportTitle.AutoSize = true;
-            this.lblReportTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReportTitle.Location = new System.Drawing.Point(92, 15);
-            this.lblReportTitle.Name = "lblReportTitle";
-            this.lblReportTitle.Size = new System.Drawing.Size(172, 20);
-            this.lblReportTitle.TabIndex = 4;
-            this.lblReportTitle.Text = "Custom Date Range";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -161,46 +180,6 @@
             this.label1.Size = new System.Drawing.Size(71, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Monthly";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(92, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Yearly";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label3.Location = new System.Drawing.Point(413, 27);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(30, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "From";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(414, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(20, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "To";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AD_Coursework_01.Properties.Resources.icons8_analysis_100;
-            this.pictureBox3.Location = new System.Drawing.Point(95, 45);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -212,15 +191,36 @@
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // panel3
             // 
-            this.pictureBox1.Image = global::AD_Coursework_01.Properties.Resources.icons8_reports_100;
-            this.pictureBox1.Location = new System.Drawing.Point(95, 50);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(240)))), ((int)(((byte)(248)))));
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.pictureBox3);
+            this.panel3.Controls.Add(this.btnGenerateAnnualReport);
+            this.panel3.Location = new System.Drawing.Point(119, 441);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(678, 155);
+            this.panel3.TabIndex = 5;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(92, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Yearly";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AD_Coursework_01.Properties.Resources.icons8_analysis_100;
+            this.pictureBox3.Location = new System.Drawing.Point(95, 45);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // GenerateReportForm
             // 
@@ -233,13 +233,13 @@
             this.Size = new System.Drawing.Size(929, 610);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,8 +249,8 @@
         private System.Windows.Forms.Button btnGenerateIncomeReport;
         private System.Windows.Forms.Button btnGenerateMonthlyReport;
         private System.Windows.Forms.Button btnGenerateAnnualReport;
-        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.DateTimePicker dtpEndDate;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;

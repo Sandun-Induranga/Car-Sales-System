@@ -5,19 +5,19 @@ using System.Windows.Forms;
 
 namespace AD_Coursework_01
 {
-    public partial class PurchaseCarsForm : UserControl
+    public partial class CarManagementForm : UserControl
     {
-        public PurchaseCarsForm()
+        public CarManagementForm()
         {
             InitializeComponent();
         }
 
         protected override void OnLoad(EventArgs e)
         {
-            base.OnLoad(e);
-            LoadAllCars();
+            base.OnLoad(e); // Call the base class's OnLoad method
+            LoadAllCars(); // Load all cars when the form loads
             GenerateCarId(); // Generate Car ID when the form loads
-            tblCars.CellClick += tblCars_CellClick;
+            tblCars.CellClick += tblCars_CellClick; // Handle cell click event
         }
 
         private void GenerateCarId()
@@ -29,7 +29,7 @@ namespace AD_Coursework_01
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    using (SqlCommand cmd = new SqlCommand("SELECT TOP 1 carId FROM Car ORDER BY carId DESC", con))
+                    using (SqlCommand cmd = new SqlCommand("SELECT TOP 1 carId FROM Car ORDER BY carId DESC", con)) // Get the last Car ID
                     {
                         var lastCarId = cmd.ExecuteScalar() as string;
                         if (lastCarId != null)

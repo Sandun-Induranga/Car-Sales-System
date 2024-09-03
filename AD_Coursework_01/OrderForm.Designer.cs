@@ -53,9 +53,9 @@
             // 
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCart.Location = new System.Drawing.Point(53, 339);
+            this.dgvCart.Location = new System.Drawing.Point(53, 379);
             this.dgvCart.Name = "dgvCart";
-            this.dgvCart.Size = new System.Drawing.Size(709, 105);
+            this.dgvCart.Size = new System.Drawing.Size(826, 105);
             this.dgvCart.TabIndex = 0;
             // 
             // dgvAvailableCars
@@ -64,12 +64,12 @@
             this.dgvAvailableCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAvailableCars.Location = new System.Drawing.Point(49, 84);
             this.dgvAvailableCars.Name = "dgvAvailableCars";
-            this.dgvAvailableCars.Size = new System.Drawing.Size(352, 111);
+            this.dgvAvailableCars.Size = new System.Drawing.Size(402, 162);
             this.dgvAvailableCars.TabIndex = 0;
             // 
             // nudQuantity
             // 
-            this.nudQuantity.Location = new System.Drawing.Point(49, 280);
+            this.nudQuantity.Location = new System.Drawing.Point(49, 320);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(215, 20);
             this.nudQuantity.TabIndex = 1;
@@ -79,7 +79,7 @@
             this.btnFinalizePurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(157)))), ((int)(((byte)(143)))));
             this.btnFinalizePurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizePurchase.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFinalizePurchase.Location = new System.Drawing.Point(671, 514);
+            this.btnFinalizePurchase.Location = new System.Drawing.Point(787, 554);
             this.btnFinalizePurchase.Name = "btnFinalizePurchase";
             this.btnFinalizePurchase.Size = new System.Drawing.Size(91, 32);
             this.btnFinalizePurchase.TabIndex = 2;
@@ -88,21 +88,21 @@
             // 
             // txtCarID
             // 
-            this.txtCarID.Location = new System.Drawing.Point(49, 230);
+            this.txtCarID.Location = new System.Drawing.Point(49, 270);
             this.txtCarID.Name = "txtCarID";
             this.txtCarID.Size = new System.Drawing.Size(215, 20);
             this.txtCarID.TabIndex = 3;
             // 
             // txtCarName
             // 
-            this.txtCarName.Location = new System.Drawing.Point(294, 230);
+            this.txtCarName.Location = new System.Drawing.Point(352, 270);
             this.txtCarName.Name = "txtCarName";
             this.txtCarName.Size = new System.Drawing.Size(215, 20);
             this.txtCarName.TabIndex = 3;
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(547, 230);
+            this.txtPrice.Location = new System.Drawing.Point(662, 270);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(215, 20);
             this.txtPrice.TabIndex = 3;
@@ -111,27 +111,26 @@
             // 
             this.dgvAvailableParts.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dgvAvailableParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvailableParts.Location = new System.Drawing.Point(411, 84);
+            this.dgvAvailableParts.Location = new System.Drawing.Point(476, 84);
             this.dgvAvailableParts.Name = "dgvAvailableParts";
-            this.dgvAvailableParts.Size = new System.Drawing.Size(352, 111);
+            this.dgvAvailableParts.Size = new System.Drawing.Size(402, 162);
             this.dgvAvailableParts.TabIndex = 0;
             // 
             // lblItemType
             // 
             this.lblItemType.AutoSize = true;
             this.lblItemType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblItemType.Location = new System.Drawing.Point(291, 282);
+            this.lblItemType.Location = new System.Drawing.Point(350, 322);
             this.lblItemType.Name = "lblItemType";
-            this.lblItemType.Size = new System.Drawing.Size(50, 16);
+            this.lblItemType.Size = new System.Drawing.Size(0, 16);
             this.lblItemType.TabIndex = 4;
-            this.lblItemType.Text = "label1";
             // 
             // btnRemoveFromCart
             // 
             this.btnRemoveFromCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(111)))), ((int)(((byte)(81)))));
             this.btnRemoveFromCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoveFromCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnRemoveFromCart.Location = new System.Drawing.Point(644, 277);
+            this.btnRemoveFromCart.Location = new System.Drawing.Point(761, 317);
             this.btnRemoveFromCart.Name = "btnRemoveFromCart";
             this.btnRemoveFromCart.Size = new System.Drawing.Size(118, 32);
             this.btnRemoveFromCart.TabIndex = 5;
@@ -148,7 +147,7 @@
             // 
             // txtCarPartSearch
             // 
-            this.txtCarPartSearch.Location = new System.Drawing.Point(411, 44);
+            this.txtCarPartSearch.Location = new System.Drawing.Point(475, 44);
             this.txtCarPartSearch.Name = "txtCarPartSearch";
             this.txtCarPartSearch.Size = new System.Drawing.Size(247, 20);
             this.txtCarPartSearch.TabIndex = 6;
@@ -159,7 +158,7 @@
             this.btnAddToCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddToCart.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAddToCart.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnAddToCart.Location = new System.Drawing.Point(511, 277);
+            this.btnAddToCart.Location = new System.Drawing.Point(628, 317);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(127, 32);
             this.btnAddToCart.TabIndex = 2;
@@ -171,7 +170,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 522);
+            this.label1.Location = new System.Drawing.Point(50, 562);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 16);
             this.label1.TabIndex = 4;
@@ -181,7 +180,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(103, 522);
+            this.lblTotal.Location = new System.Drawing.Point(103, 562);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(15, 16);
             this.lblTotal.TabIndex = 4;
@@ -207,7 +206,7 @@
             this.Controls.Add(this.dgvAvailableCars);
             this.Controls.Add(this.dgvCart);
             this.Name = "OrderForm";
-            this.Size = new System.Drawing.Size(807, 571);
+            this.Size = new System.Drawing.Size(929, 610);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableCars)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();

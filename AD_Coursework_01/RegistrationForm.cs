@@ -67,7 +67,11 @@ namespace AD_Coursework_01
                         transaction.Commit();
 
                         MessageBox.Show("Registration successful!");
-                        this.Close(); // Close the registration form
+                        // Transition to the Login form
+                        LoginForm loginForm = new LoginForm();
+                        loginForm.Show();
+                        this.Hide();
+
                     }
                     catch (Exception ex)
                     {

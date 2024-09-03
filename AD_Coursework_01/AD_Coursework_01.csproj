@@ -187,11 +187,11 @@
     <Compile Include="OrderForm.Designer.cs">
       <DependentUpon>OrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PurchaseCarsForm.cs">
+    <Compile Include="CarManagementForm.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PurchaseCarsForm.Designer.cs">
-      <DependentUpon>PurchaseCarsForm.cs</DependentUpon>
+    <Compile Include="CarManagementForm.Designer.cs">
+      <DependentUpon>CarManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RegistrationForm.cs">
       <SubType>Form</SubType>
@@ -253,8 +253,8 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PurchaseCarsForm.resx">
-      <DependentUpon>PurchaseCarsForm.cs</DependentUpon>
+    <EmbeddedResource Include="CarManagementForm.resx">
+      <DependentUpon>CarManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>

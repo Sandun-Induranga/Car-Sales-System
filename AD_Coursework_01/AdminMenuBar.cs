@@ -33,7 +33,7 @@ namespace AD_Coursework_01
 
         private void btnCars_Click(object sender, EventArgs e)
         {
-            LoadContentIntoPanel(new PurchaseCarsForm());
+            LoadContentIntoPanel(new CarManagementForm());
             lblTitle.Text = "Admin/Manage Cars";
         }
 
