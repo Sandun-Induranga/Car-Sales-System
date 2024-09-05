@@ -52,6 +52,9 @@ namespace AD_Coursework_01
 
                     // Load data for the chart
                     LoadChartData(connection);
+
+                    // Set the date label to today's date
+                    lblDate.Text = DateTime.Now.ToString("dd/MM/yyyy");
                 }
                 catch (Exception ex)
                 {
@@ -100,14 +103,15 @@ namespace AD_Coursework_01
                 chartDataAdapter.Fill(chartDataTable);
 
                 // Bind data to chart
-                chart1.Series["Series1"].XValueMember = "Month";
-                chart1.Series["Series1"].YValueMembers = "Orders";
-                chart1.DataSource = chartDataTable;
-                chart1.DataBind();
+                chartSales.Series["Series1"].XValueMember = "Month";
+                chartSales.Series["Series1"].YValueMembers = "Orders";
+                chartSales.DataSource = chartDataTable;
+                chartSales.DataBind();
+                chartSales.Series["Series1"].LegendText = "Orders"; // Name the chart series
 
                 // Name the chart axes
-                chart1.ChartAreas[0].AxisX.Title = "Month";
-                chart1.ChartAreas[0].AxisY.Title = "Number of Orders";
+                chartSales.ChartAreas[0].AxisX.Title = "Month";
+                chartSales.ChartAreas[0].AxisY.Title = "Number of Orders";
             }
             catch (Exception ex)
             {

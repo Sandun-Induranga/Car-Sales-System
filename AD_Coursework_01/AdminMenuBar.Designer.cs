@@ -30,15 +30,15 @@
         {
             this.panelContent = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
             this.btnCarParts = new System.Windows.Forms.Button();
             this.btnCars = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblCopyright = new System.Windows.Forms.Label();
@@ -67,39 +67,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 410);
             this.panel2.TabIndex = 1;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(571, 20);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(177, 24);
-            this.lblTitle.TabIndex = 2;
-            this.lblTitle.Text = "Admin/Dashboard";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label1.Font = new System.Drawing.Font("Segoe Fluent Icons", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(185, 27);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "ABC Car Traders";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::AD_Coursework_01.Properties.Resources.icons8_abc_24;
-            this.pictureBox3.Location = new System.Drawing.Point(9, 25);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 9;
-            this.pictureBox3.TabStop = false;
             // 
             // btnLogout
             // 
@@ -220,6 +187,39 @@
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = true;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(571, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(177, 24);
+            this.lblTitle.TabIndex = 2;
+            this.lblTitle.Text = "Admin/Dashboard";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Segoe Fluent Icons", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(39, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(185, 27);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "ABC Car Traders";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::AD_Coursework_01.Properties.Resources.icons8_abc_24;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 9;
+            this.pictureBox3.TabStop = false;
             // 
             // lblUsername
             // 

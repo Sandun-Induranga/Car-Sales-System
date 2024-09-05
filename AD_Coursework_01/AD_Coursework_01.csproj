@@ -377,5 +377,26 @@
   <ItemGroup>
     <None Include="Resources\icons8-analysis-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-car-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-car-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-car-part-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-money-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-clock-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendar-80.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

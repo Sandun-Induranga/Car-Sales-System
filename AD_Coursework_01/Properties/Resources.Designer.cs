@@ -133,6 +133,16 @@ namespace AD_Coursework_01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_calendar_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-calendar-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_car_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-car-100", resourceCulture);
@@ -146,6 +156,16 @@ namespace AD_Coursework_01.Properties {
         internal static System.Drawing.Bitmap icons8_car_100__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-car-100 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_car_100__2_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-car-100 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -203,9 +223,39 @@ namespace AD_Coursework_01.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_car_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-car-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_car_part_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-car-part-80", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_cart_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-cart-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_clock_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-clock-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +306,26 @@ namespace AD_Coursework_01.Properties {
         internal static System.Drawing.Bitmap icons8_meeting_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-meeting-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_money_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-money-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_money_80 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-money-80", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
