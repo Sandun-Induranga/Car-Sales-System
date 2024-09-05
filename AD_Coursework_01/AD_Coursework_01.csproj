@@ -134,7 +134,7 @@
       <DependentUpon>abc_car_tradersDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="AdminDashboard.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>

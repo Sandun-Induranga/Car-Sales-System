@@ -59,11 +59,9 @@ namespace AD_Coursework_01
             string partSearchTerm = txtCarPartSearch.Text.Trim();
 
             // Define the queries with search conditions
-            string carQuery = "SELECT CarID, CONCAT(Brand, ' ', Model) AS CarName, Price, QtyOnHand FROM Car " +
-                              "WHERE CarID LIKE @CarSearch OR Brand + ' ' + Model LIKE @CarSearch";
+            string carQuery = "SELECT CarID, CONCAT(Brand, ' ', Model) AS CarName, Price, QtyOnHand FROM Car WHERE CarID LIKE @CarSearch OR Brand + ' ' + Model LIKE @CarSearch";
 
-            string partQuery = "SELECT PartID, PartName, Price, QtyOnHand FROM CarPart " +
-                               "WHERE PartID LIKE @PartSearch OR PartName LIKE @PartSearch";
+            string partQuery = "SELECT PartID, PartName, Price, QtyOnHand FROM CarPart WHERE PartID LIKE @PartSearch OR PartName LIKE @PartSearch";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {

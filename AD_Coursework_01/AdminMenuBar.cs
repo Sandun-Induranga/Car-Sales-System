@@ -8,7 +8,7 @@ namespace AD_Coursework_01
         public AdminMenuBar(string username)
         {
             InitializeComponent();
-            LoadContentIntoPanel(new CustomerDashboard());
+            LoadContentIntoPanel(new AdminDashboard());
             lblUsername.Text = username;
         }
 
@@ -27,7 +27,7 @@ namespace AD_Coursework_01
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadContentIntoPanel(new CustomerDashboard());
+            LoadContentIntoPanel(new AdminDashboard());
             lblTitle.Text = "Admin/Dashboard";
         }
 
