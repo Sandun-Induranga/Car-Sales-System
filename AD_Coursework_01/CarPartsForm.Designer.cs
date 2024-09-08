@@ -1,4 +1,6 @@
-﻿namespace AD_Coursework_01
+﻿using System.Windows.Forms;
+
+namespace AD_Coursework_01
 {
     partial class CarPartsForm
     {
@@ -29,6 +31,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblCarParts = new System.Windows.Forms.DataGridView();
             this.abccartradersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abc_car_tradersDataSet = new AD_Coursework_01.abc_car_tradersDataSet();
@@ -44,16 +49,39 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblCarParts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abc_car_tradersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tblCarParts
             // 
-            this.tblCarParts.AutoGenerateColumns = false;
+            this.tblCarParts.AllowUserToResizeColumns = false;
+            this.tblCarParts.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tblCarParts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tblCarParts.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblCarParts.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.tblCarParts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.tblCarParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tblCarParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tblCarParts.DataSource = this.abccartradersDataSetBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tblCarParts.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tblCarParts.EnableHeadersVisualStyles = false;
+            this.tblCarParts.GridColor = System.Drawing.Color.LightGray;
             this.tblCarParts.Location = new System.Drawing.Point(90, 279);
             this.tblCarParts.Name = "tblCarParts";
             this.tblCarParts.Size = new System.Drawing.Size(724, 246);
@@ -189,10 +217,29 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Quantity On Hand";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AD_Coursework_01.Properties.Resources.icons8_search_20;
+            this.pictureBox1.Location = new System.Drawing.Point(330, 238);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(90, 238);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(235, 20);
+            this.textBox1.TabIndex = 7;
+            // 
             // CarPartsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -211,6 +258,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblCarParts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abc_car_tradersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +281,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private PictureBox pictureBox1;
+        private TextBox textBox1;
     }
 }

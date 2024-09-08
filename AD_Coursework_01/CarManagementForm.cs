@@ -18,6 +18,14 @@ namespace AD_Coursework_01
             LoadAllCars(); // Load all cars when the form loads
             GenerateCarId(); // Generate Car ID when the form loads
             tblCars.CellClick += tblCars_CellClick; // Handle cell click event
+
+            // Handle search event
+            txtSearch.TextChanged += TxtSearch_TextChanged;
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            LoadAllCars(txtSearch.Text); // Pass the search term to the LoadAllCars method
         }
 
         private void GenerateCarId()
@@ -66,17 +74,31 @@ namespace AD_Coursework_01
             GenerateCarId();
         }
 
-        private void LoadAllCars()
+        private void LoadAllCars(string searchTerm = "")
         {
             string connectionString = Properties.Settings.Default.abcCarTradersConnectionString;
-
             DataTable dt = new DataTable();
+
             try
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("SELECT * FROM Car", con))
+                    string query = "SELECT * FROM Car";
+
+                    // If there is a search term, add a WHERE clause to filter the results
+                    if (!string.IsNullOrEmpty(searchTerm))
                     {
+                        query += " WHERE CarID LIKE @searchTerm OR Brand + ' ' + Model LIKE @CarSearch\"";
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        if (!string.IsNullOrEmpty(searchTerm))
+                        {
+                            // Use wildcard search with '%' for partial matches
+                            cmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+                        }
+
                         con.Open();
                         using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
                         {

@@ -1,4 +1,7 @@
-﻿namespace AD_Coursework_01
+﻿using DocumentFormat.OpenXml.Spreadsheet;
+using System.Windows.Forms;
+
+namespace AD_Coursework_01
 {
     partial class CarManagementForm
     {
@@ -30,6 +33,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tblCars = new System.Windows.Forms.DataGridView();
             this.abccartradersDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.abc_car_tradersDataSet = new AD_Coursework_01.abc_car_tradersDataSet();
@@ -51,36 +55,42 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tblCars)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.abc_car_tradersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tblCars
             // 
+            this.tblCars.AllowUserToResizeColumns = false;
+            this.tblCars.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tblCars.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.tblCars.AutoGenerateColumns = false;
+            this.tblCars.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tblCars.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.tblCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.tblCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.tblCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblCars.DataSource = this.abccartradersDataSetBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tblCars.DefaultCellStyle = dataGridViewCellStyle1;
-            this.tblCars.GridColor = System.Drawing.Color.White;
-            this.tblCars.Location = new System.Drawing.Point(92, 233);
+            this.tblCars.EnableHeadersVisualStyles = false;
+            this.tblCars.GridColor = System.Drawing.Color.LightGray;
+            this.tblCars.Location = new System.Drawing.Point(92, 277);
             this.tblCars.Name = "tblCars";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tblCars.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tblCars.Size = new System.Drawing.Size(733, 294);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tblCars.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.tblCars.Size = new System.Drawing.Size(733, 250);
             this.tblCars.TabIndex = 0;
             // 
             // abccartradersDataSetBindingSource
@@ -265,10 +275,28 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // PurchaseCarsForm
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(92, 231);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(235, 20);
+            this.txtSearch.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AD_Coursework_01.Properties.Resources.icons8_search_20;
+            this.pictureBox1.Location = new System.Drawing.Point(332, 231);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // CarManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -280,6 +308,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtColor);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtQtyOnHand);
@@ -288,11 +317,12 @@
             this.Controls.Add(this.txtModel);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.tblCars);
-            this.Name = "PurchaseCarsForm";
+            this.Name = "CarManagementForm";
             this.Size = new System.Drawing.Size(929, 610);
             ((System.ComponentModel.ISupportInitialize)(this.tblCars)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abccartradersDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.abc_car_tradersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +351,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnClear;
+        private TextBox txtSearch;
+        private PictureBox pictureBox1;
     }
 }

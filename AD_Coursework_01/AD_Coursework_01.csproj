@@ -139,12 +139,6 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdminLogin.Designer.cs">
-      <DependentUpon>AdminLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="AdminMenuBar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,12 +193,6 @@
     <Compile Include="RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WelcomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WelcomeForm.Designer.cs">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="LoginForm.cs">
@@ -215,9 +203,6 @@
     </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdminLogin.resx">
-      <DependentUpon>AdminLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMenuBar.resx">
       <DependentUpon>AdminMenuBar.cs</DependentUpon>
@@ -258,9 +243,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WelcomeForm.resx">
-      <DependentUpon>WelcomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="abc_car_tradersDataSet.xsc">
       <DependentUpon>abc_car_tradersDataSet.xsd</DependentUpon>
@@ -397,6 +379,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-calendar-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smart-driverless-taxi-to-any-point-of-the-city-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hugging-face-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-create-order-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

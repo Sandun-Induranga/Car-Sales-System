@@ -9,7 +9,7 @@ namespace AD_Coursework_01
         public CustomerMenuBar(string customerId, string username)
         {
             InitializeComponent();
-            LoadContentIntoPanel(new CustomerDashboard());
+            LoadContentIntoPanel(new CustomerDashboard(customerId));
             this.customerId = customerId;
             lblUsername.Text = username;
         }
@@ -29,7 +29,7 @@ namespace AD_Coursework_01
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadContentIntoPanel(new CustomerDashboard());
+            LoadContentIntoPanel(new CustomerDashboard(customerId));
             lblTitle.Text = "Customer/Dashboard";
         }
 
@@ -47,8 +47,10 @@ namespace AD_Coursework_01
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            // Show the login form and close the current form
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+            // Close the current form
             this.Close();
         }
     }

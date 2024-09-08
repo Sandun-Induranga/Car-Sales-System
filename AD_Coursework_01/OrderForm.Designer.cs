@@ -1,4 +1,6 @@
-﻿namespace AD_Coursework_01
+﻿using System.Windows.Forms;
+
+namespace AD_Coursework_01
 {
     partial class OrderForm
     {
@@ -28,6 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCart = new System.Windows.Forms.DataGridView();
             this.dgvAvailableCars = new System.Windows.Forms.DataGridView();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
@@ -43,16 +51,33 @@
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableCars)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableParts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCart
             // 
+            this.dgvCart.AllowUserToResizeColumns = false;
+            this.dgvCart.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvCart.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCart.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvCart.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.dgvCart.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCart.EnableHeadersVisualStyles = false;
+            this.dgvCart.GridColor = System.Drawing.Color.LightGray;
             this.dgvCart.Location = new System.Drawing.Point(53, 379);
             this.dgvCart.Name = "dgvCart";
             this.dgvCart.Size = new System.Drawing.Size(826, 105);
@@ -60,8 +85,18 @@
             // 
             // dgvAvailableCars
             // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvAvailableCars.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAvailableCars.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvAvailableCars.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.dgvAvailableCars.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAvailableCars.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvailableCars.EnableHeadersVisualStyles = false;
+            this.dgvAvailableCars.GridColor = System.Drawing.Color.LightGray;
             this.dgvAvailableCars.Location = new System.Drawing.Point(49, 84);
             this.dgvAvailableCars.Name = "dgvAvailableCars";
             this.dgvAvailableCars.Size = new System.Drawing.Size(402, 162);
@@ -109,8 +144,18 @@
             // 
             // dgvAvailableParts
             // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dgvAvailableParts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAvailableParts.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgvAvailableParts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(62)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            this.dgvAvailableParts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAvailableParts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvailableParts.EnableHeadersVisualStyles = false;
+            this.dgvAvailableParts.GridColor = System.Drawing.Color.LightGray;
             this.dgvAvailableParts.Location = new System.Drawing.Point(476, 84);
             this.dgvAvailableParts.Name = "dgvAvailableParts";
             this.dgvAvailableParts.Size = new System.Drawing.Size(402, 162);
@@ -186,10 +231,32 @@
             this.lblTotal.TabIndex = 4;
             this.lblTotal.Text = "0";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AD_Coursework_01.Properties.Resources.icons8_search_20;
+            this.pictureBox1.Location = new System.Drawing.Point(302, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::AD_Coursework_01.Properties.Resources.icons8_search_20;
+            this.pictureBox2.Location = new System.Drawing.Point(728, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
             // OrderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCarPartSearch);
             this.Controls.Add(this.txtCarSearch);
             this.Controls.Add(this.btnRemoveFromCart);
@@ -211,6 +278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableCars)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailableParts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +302,7 @@
         private System.Windows.Forms.TextBox txtCarPartSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTotal;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
